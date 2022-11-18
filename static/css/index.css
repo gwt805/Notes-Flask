@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background-image: url("../imgs/background.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: 100%;
+    cursor: url("../imgs/mouse.png"), default;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f3f3f3;
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #aaa;
+}
+
+
+.wt-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+
+}
+
+.tittle {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.tittle span {
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+}
+
+.tittle span:nth-child(2):hover {
+    font-weight: bold;
+}
+
+.middle {
+    border-top: 1px solid gray;
+    width: 100%;
+    height: 89%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 115px);
+    grid-gap: 50px;
+    grid-row: auto;
+    justify-content: space-around;
+    position: fixed;
+    top: 60px;
+    overflow: auto;
+}
+
+.middle div {
+    width: 100px;
+    height: 100px;
+    background: rgb(44, 51, 90);
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 5px;
+}
+
+.middle div:hover {
+    opacity: 0.7;
+}
+
+.middle div img {
+    width: 50px;
+    position: relative;
+    top: -40px;
+    left: 25px;
+}
+
+.middle div h6 {
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    top: 40px;
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    top: 95.3%;
+    color: #fff;
+    text-align: center;
+    line-height: 2.5;
+    font-size: large;
+}
+
+.footer span:nth-child(2) {
+    margin-left: 2%;
+}
+
+.footer span:nth-child(3) {
+    margin-left: 1%;
+}
+
+.footer span svg:hover,
+img:hover {
+    opacity: 0.7;
+    cursor: url("../imgs/mouse.png"), default;
+}
