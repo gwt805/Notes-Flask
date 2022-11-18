@@ -1,2 +1,4 @@
 # Notes-Flask
-个人专属笔记空间
+<div align="center">
+    <img src="static/imgs/logo_white.png">
+</div>
