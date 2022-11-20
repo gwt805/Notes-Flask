@@ -39,11 +39,6 @@ def logins():
 
 @app.route('/notes')
 def notes():
-    try:
-        id = request.args["id"]
-        return render_template(f"notes/{id}-note.html")
-    except:
-        pass
     return render_template("index.html")
 
 # app.run(host="0.0.0.0", port=80) # 本地调试打开

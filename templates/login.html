@@ -5,13 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="shortcut icon" href="../static/imgs/logo_source.jpg" type="image/x-icon" />
   <link href="../static/css/login.css" rel="stylesheet" type="text/css">
-  <title>卫龙笔记登录页</title>
-  <style>
-    .J_codeimg {
-      z-index: -1;
-      position: absolute;
-    }
-  </style>
+  <title>登录</title>
 </head>
 
 <body oncontextmenu="return false" onselectstart="return false" oncopy="return false">
@@ -34,7 +28,7 @@
       </p>
       <div class="signup">
         <a class="gv" onclick="login()">登&nbsp;&nbsp;录</a>
-        <a class="gv" onclick="clear()">清&nbsp;&nbsp;空</a>
+        <a class="gv" onclick="clears()">清&nbsp;&nbsp;空</a>
       </div>
     </div>
     <div class="canvaszz"> </div>
@@ -57,14 +51,20 @@
         if (res && res.data == "successful") {
           //设置Cookie中的名称与值以及过期时间【单位：天】
           var expires = new Date();
-          expires.setTime(expires.getTime()+1*24*60*60*1000);
-          document.cookie = "isLogin=true;expires="+expires.toGMTString();
+          expires.setTime(expires.getTime() + 1 * 24 * 60 * 60 * 1000);
+          document.cookie = "isLogin=true;expires=" + expires.toGMTString();
           window.location.href = "/notes";
-        }else{
+        } else {
           $("#error").html("账号或密码错误!");
         }
       });
     }
+
+    function clears() {
+      $("#user").val("");
+      $("#pwd").val("");
+    }
+
   </script>
 </body>
 

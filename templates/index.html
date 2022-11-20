@@ -15,27 +15,47 @@
   <div class="wt-div">
     <div class="tittle">
       <span><img src="../static/imgs/logo_white.png" alt="" srcset="" draggable="false"></span><!-- <span>登录</span> -->
-    </div>
+    </div> <!-- tittle end -->
     <div class="middle">
-      <div class="api" title="测试测试测试测试测试" onclick="goNotes(1)">
-        <img src="../static/imgs/logo_white.png" draggable="false">
-        <h6>测试试测试</h6>
+      <div class="api" title="实时更新新冠肺炎全国疫情数据API接口" onclick="goNotes('https'+':' + '//api.vvhan.com/covid.html')">
+        <img src="../static/imgs/logo_api.svg" draggable="false">
+        <p>
+          <marquee direction="left">新冠肺炎疫情实时数据</marquee>
+        </p>
       </div>
-    </div>
+      <div class="api" title="每天更新十二星座运势,十二星座爱情运势,配对星座等" onclick="goNotes('https'+':' + '//api.vvhan.com/horoscope.html')">
+        <img src="../static/imgs/logo_api.svg" draggable="false">
+        <p>
+          <marquee direction="left">每日星座运势API接口</marquee>
+        </p>
+      </div>
+    </div> <!-- middle end -->
     <div class="footer">
+      <marquee behavior="" direction="left" class="notes-count"></marquee> <!-- 跑马灯 -->
       <span>Copyright © 2022.11.17</span>
       <span title="卫龙的Github"><a href="https://github.com/gwt805/" target="_blank"><img src="../static/imgs/github4.svg"
             draggable="false"></a></span>
       <span title="卫龙的博客园"><a href="https://www.cnblogs.com/taotao0805/" target="_blank"><img
             src="../static/imgs/bky.png" draggable="false" style="width: 28px;"></a></span>
-    </div>
-    <canvas></canvas>
+    </div> <!-- footer end -->
+    <canvas id="canvas"></canvas>
   </div>
 </body>
 <script src="../static/lib/jquery/1.9.1/jquery.min.js"></script>
 <script src="../static/lib/bootstrap/5.1.3/bootstrap.bundle.min.js"></script>
-<script src="../static/lib/canvas-nest/2.0.4/canvas-nest.js"></script>
-<script src="../static/js/index.js"></script>
+<script src="../static/js/canvas.js"></script>
 <script src="../static/js/disable.js"></script>
+<script>
+  // 跳转笔记或者API介绍页面
+  function goNotes(url) {
+    window.open(url, "_black");
+  }
+
+  const apiCount = document.getElementsByClassName("api").length;
+  const pyCount = document.getElementsByClassName("python").length;
+  const unixCount = document.getElementsByClassName("linux").length;
+  $(".notes-count").html("API-笔记：<t style='color:rgb(255,100,0)'>" + apiCount + "</t>个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python-笔记：<t style='color:rgb(255,100,0)'>" + pyCount + "</t>个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linux-笔记：<t style='color:rgb(255,100,0)'>" + unixCount + "</t>个");
+
+</script>
 
 </html>

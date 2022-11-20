@@ -19,11 +19,11 @@ document.oncontextmenu = function () {
 }
 
 // 禁止选取内容
-document.onselectstart = function () {
-    return false;
-}
+// document.onselectstart = function () {
+//     return false;
+// }
 
 // 禁止复制
-document.oncopy = function () {
-    return false;
-}
+// document.oncopy = function () {
+//     return false;
+// }
