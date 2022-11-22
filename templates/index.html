@@ -14,7 +14,7 @@
 <body oncontextmenu="return false" onselectstart="return false" oncopy="return false">
   <div class="wt-div">
     <div class="tittle">
-      <span><img src="../static/imgs/logo_white.png" alt="" srcset="" draggable="false"></span><!-- <span>登录</span> -->
+      <span><img src="../static/imgs/logo_white.png" alt="" srcset="" draggable="false"></span><span style="font-size: 32px;" onclick="logout()">注销</span>
     </div> <!-- tittle end -->
     <div class="middle">
       <div class="api" title="实时更新新冠肺炎全国疫情数据API接口" onclick="goNotes('https://api.vvhan.com/covid.html')">
@@ -321,11 +321,12 @@
     window.open(url, "_black");
   }
 
-  $(".api").hover(() => {
-    var a = event.target;
-    var b = a.getElementsByClassName('apiName');
-    console.log(b.value)
-  })
+  // 退出登录
+  function logout(){
+    document.cookie = "isLogin=false;";
+    window.location.href = ("/");
+  }
+  
   const apiCount = document.getElementsByClassName("api").length;
   const pyCount = document.getElementsByClassName("python").length;
   const unixCount = document.getElementsByClassName("linux").length;

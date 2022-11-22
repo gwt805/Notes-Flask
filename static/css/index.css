@@ -53,8 +53,8 @@ body {
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-around;
-    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -64,6 +64,9 @@ body {
     font-size: 20px;
     line-height: 50px;
     color: white;
+}
+.tittle span:nth-child(2):hover{
+    color: gray;
 }
 
 .middle {
@@ -136,8 +139,7 @@ body {
     margin-left: 1%;
 }
 
-.footer span svg:hover,
-img:hover {
+.footer span svg:hover,img:hover {
     opacity: 0.7;
     cursor: url("../imgs/mouse.png"), default;
 }

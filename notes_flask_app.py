@@ -20,9 +20,11 @@ def make_err_response(err_msg):
     data = json.dumps({'code': -1, 'errorMsg': err_msg})
     return Response(data, mimetype='application/json')
 
+
 @app.route('/', methods=['GET'])
 def jianli():
     return render_template("resume.html")
+
 
 @app.route('/login', methods=['GET'])
 def login():
@@ -44,4 +46,5 @@ def logins():
 def notes():
     return render_template("index.html")
 
-# app.run(host="0.0.0.0", port=80) # 本地调试打开
+
+# app.run(host="0.0.0.0", port=80)  # 本地调试打开

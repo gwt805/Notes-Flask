@@ -50,9 +50,10 @@
       }).done(function (res) {
         if (res && res.data == "successful") {
           //设置Cookie中的名称与值以及过期时间【单位：天】
-          var expires = new Date();
-          expires.setTime(expires.getTime() + 1 * 24 * 60 * 60 * 1000);
-          document.cookie = "isLogin=true;expires=" + expires.toGMTString();
+          // var expires = new Date();
+          // expires.setTime(expires.getTime() + 1 * 24 * 60 * 60 * 1000);
+          // document.cookie = "isLogin=true;expires=" + expires.toGMTString();
+          document.cookie = "isLogin=true;";
           window.location.href = "/notes";
         } else {
           $("#error").html("账号或密码错误!");

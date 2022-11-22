@@ -31,6 +31,7 @@ document.oncopy = function () {
 // 必须登录
 $(window).load(function () {
     if ((document.cookie).split("=")[1] != "true") {
+        alert("必须登录后才能查看!");
         window.location.href = "/";
     }
 });
