@@ -44,4 +44,4 @@ def logins():
 def notes():
     return render_template("index.html")
 
-app.run(host="0.0.0.0", port=80) # 本地调试打开
+# app.run(host="0.0.0.0", port=80) # 本地调试打开
