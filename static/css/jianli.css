@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(51, 51, 51);
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.tittle {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(51, 51, 51);
+}
+
+.tittle span {
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+}
+
+.jieshao {
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    margin-top: 50px;
+    min-width: 80%;
+}
+
+.jieshao p {
+    text-align: center;
+}
+
+.jieshao div {
+    width: 50%;
+    height: 200px;
+    float: left;
+    margin: auto;
+}
+
+.jieshao div table {
+    width: 100%;
+    line-height: 40px;
+    min-width: 850px;
+}
+
+.jieshao div img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.jineng {
+    position: absolute;
+    top: 350px;
+    width: 80%;
+    min-width: 850px;
+}
+
+.jineng div {
+    width: 50%;
+    height: 150px;
+    float: left;
+    color: white;
+    font-size: 24px;
+}
+
+.jineng div table tr td {
+    padding-left: 20px;
+}
+
+.jineng div table {
+    margin: auto;
+}
+
+.jineng div ol li {
+    line-height: 40px;
+}
+
+h2 {
+    color: orange;
+    text-align: center;
+    border-bottom: 1px dashed gray;
+}
+
+.col-md-12 {
+    position: absolute;
+    width: 80%;
+    top: 580px;
+    min-width: 850px;
+}
