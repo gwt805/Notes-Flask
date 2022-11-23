@@ -7,7 +7,7 @@ body {
 }
 
 .tittle {
-    width: 100%;
+    width: 80%;
     height: 50px;
     display: flex;
     /* justify-content: space-around; */
@@ -22,11 +22,6 @@ body {
     font-size: 20px;
     line-height: 50px;
     color: white;
-    /* margin-left: -50px; */
-}
-.tittle span:nth-child(2) {
-    position: absolute;
-    left: 1480px;
 }
 
 .jieshao {
@@ -51,7 +46,7 @@ body {
 .jieshao div table {
     width: 100%;
     line-height: 40px;
-    min-width: 850px;
+    min-width: 700px;
 }
 
 .jieshao div img {
@@ -66,7 +61,7 @@ body {
     position: absolute;
     top: 350px;
     width: 80%;
-    min-width: 850px;
+    min-width: 700px;
 }
 
 .jineng div {
@@ -99,5 +94,5 @@ h2 {
     position: absolute;
     width: 80%;
     top: 580px;
-    min-width: 850px;
+    min-width: 700px;
 }
