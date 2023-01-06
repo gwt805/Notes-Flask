@@ -21,7 +21,7 @@
 		</div> <!-- tittle end -->
 		<div class="jieshao">
 			<h2>基本资料</h2>
-			<p>熟练使用Python之Django配合Mysql数据库快速搭建Web应用Demo, 熟悉Linux服务器部署web服务器。GitHub地址: https://github.com/gwt805 , 博客园地址:
+			<p>熟练使用Python之Django配合Mysql数据库快速搭建Web应用Demo, 熟悉Linux服务器部署web应用。GitHub地址: https://github.com/gwt805 , 博客园地址:
 				https://www.cnblogs.com/taotao0805/</p>
 			<div>
 				<img src="../static/imgs/jianli_tx.jpg" draggable="false">
@@ -167,8 +167,44 @@
 				</div>
 			</div>
 		</div> <!-- col-md-12 end-->
+		<div class="prodemo" onmouseover="cleansetimg()" onmouseout="setimgss()">
+			<h2>项目DEMO</h2>
+			<a href="" id="demo-url" target="_blank">
+				<img src="../static/imgs/demo1.png" alt="" title="" id="prodemo" />
+			</a>
+		</div> <!-- prodemo end -->
 	</div>
 </body>
 <script src="../static/js/disable_login.js"></script>
+<script>
+	let index = 1;
+	function setimgs() {
+		//判断index是否大于3
+		if (index > 2) {
+			index = 1;
+		}
+		const img = document.getElementById("prodemo");
+		img.src = "../static/imgs/demo" + index + ".png";
+		img.alt = "demo" + index;
+		//获取img对象
+		if (index == 1) {
+			document.getElementById("demo-url").href = 'https://guoweitao.pythonanywhere.com/login'
+			img.title = "可以点击访问该项目, 用户名和密码都是 admin"
+		}
+		else if (index == 2) {
+			document.getElementById("demo-url").href = 'https://weilong-funy.streamlit.app'
+			img.title = "可以点击访问该项目"
+		}
+		index++;
+	}
+	//2.定义定时器
+	let setimg = setInterval(setimgs, 1200);
+	function cleansetimg() {
+		clearInterval(setimg)
+	}
+	function setimgss() {
+		setimg = setInterval(setimgs, 1200);
+	}
+</script>
 
 </html>

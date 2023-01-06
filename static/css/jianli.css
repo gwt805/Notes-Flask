@@ -96,3 +96,12 @@ h2 {
     top: 580px;
     min-width: 700px;
 }
+
+.prodemo {
+    position: absolute;
+    top: 1250px;
+    width: 80%;
+}
+.prodemo img{
+    width: 100%;
+}

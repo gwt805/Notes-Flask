@@ -1,4 +1,6 @@
 import json
+from loguru import logger
+from wxpusher import WxPusher
 from flask import Flask, request, Response, render_template
 
 # 初始化web应用
@@ -21,13 +23,26 @@ def make_err_response(err_msg):
     return Response(data, mimetype='application/json')
 
 
+def sendmsg(flag):
+    token = "AT_nkD5XKtSCOqTCDUYfY6KAQJiPrY5VPFD"
+    uid = "UID_XP4adcbMnVNvV9Zkb413jFDQAP8l"
+    content = f"用户: {request.environ['REMOTE_ADDR']} 访问了您的应用 [Notes-Flask] 的 {flag} 页面"
+    try:
+        res = WxPusher.send_message(content=content, uids=[uid], token=token)
+        logger.info(res)
+    except:
+        logger.error("发消息出错了?")
+
+
 @app.route('/', methods=['GET'])
 def jianli():
+    sendmsg("简历")
     return render_template("resume.html")
 
 
 @app.route('/login', methods=['GET'])
 def login():
+    sendmsg("登录")
     return render_template("login.html")
 
 
@@ -44,7 +59,8 @@ def logins():
 
 @app.route('/notes')
 def notes():
+    sendmsg("笔记")
     return render_template("index.html")
 
 
-# app.run(host="0.0.0.0", port=80)  # 本地调试打开
+# app.run(host="0.0.0.0", port=80, debug=True)  # 本地调试打开
