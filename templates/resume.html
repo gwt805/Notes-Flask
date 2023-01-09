@@ -188,16 +188,17 @@
 		img.alt = "demo" + index;
 		//获取img对象
 		if (index == 1) {
-			document.getElementById("demo-url").href = 'https://guoweitao.pythonanywhere.com/login'
-			img.title = "可以点击访问该项目, 用户名和密码都是 admin"
+			document.getElementById("demo-url").href = 'https://guoweitao.pythonanywhere.com/login';
+			img.title = "可以点击访问该项目, 用户名和密码都是 admin";
 		}
 		else if (index == 2) {
-			document.getElementById("demo-url").href = 'https://weilong-funy.streamlit.app'
-			img.title = "可以点击访问该项目"
+			document.getElementById("demo-url").href = 'https://weilong-funy.streamlit.app';
+			img.title = "可以点击访问该项目";
 		}
 		else if (index == 3) {
-			document.getElementById("demo-url").href = '#'
-			img.title = "暂时没有线上访问demo地址喔"
+			document.getElementById("demo-url").href = '#';
+			document.getElementById("demo-url").target = "_self";
+			img.title = "暂时没有线上访问demo地址喔";
 		}
 		index++;
 	}
