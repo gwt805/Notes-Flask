@@ -180,7 +180,7 @@
 	let index = 1;
 	function setimgs() {
 		//判断index是否大于3
-		if (index > 2) {
+		if (index > 3) {
 			index = 1;
 		}
 		const img = document.getElementById("prodemo");
@@ -194,6 +194,10 @@
 		else if (index == 2) {
 			document.getElementById("demo-url").href = 'https://weilong-funy.streamlit.app'
 			img.title = "可以点击访问该项目"
+		}
+		else if (index == 3) {
+			document.getElementById("demo-url").href = '#'
+			img.title = "暂时没有线上访问demo地址喔"
 		}
 		index++;
 	}
